@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "tt_chocolates_bold";
+  src: url("../fonts/tt_chocolates_bold.woff") format("woff"), url("../fonts/tt_chocolates_bold.woff2") format("woff2"), url("../fonts/tt_chocolates_bold.eot"), url("../fonts/tt_chocolates_bold.eot?#iefix") format("embedded-opentype"), url("../fonts/tt_chocolates_bold.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "tt_chocolates_demibold";
+  src: url("../fonts/tt_chocolates_demibold.woff") format("woff"), url("../fonts/tt_chocolates_demibold.woff2") format("woff2"), url("../fonts/tt_chocolates_demibold.eot"), url("../fonts/tt_chocolates_demibold.eot?#iefix") format("embedded-opentype"), url("../fonts/tt_chocolates_demibold.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "tt_chocolates_medium";
+  src: url("../fonts/tt_chocolates_medium.woff") format("woff"), url("../fonts/tt_chocolates_medium.woff2") format("woff2"), url("../fonts/tt_chocolates_medium.eot"), url("../fonts/tt_chocolates_medium.eot?#iefix") format("embedded-opentype"), url("../fonts/tt_chocolates_medium.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*# sourceMappingURL=config.css.map */

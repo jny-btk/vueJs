@@ -1,0 +1,233 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "tt_chocolates_bold";
+  src: url("../fonts/tt_chocolates_bold.woff") format("woff"), url("../fonts/tt_chocolates_bold.woff2") format("woff2"), url("../fonts/tt_chocolates_bold.eot"), url("../fonts/tt_chocolates_bold.eot?#iefix") format("embedded-opentype"), url("../fonts/tt_chocolates_bold.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "tt_chocolates_demibold";
+  src: url("../fonts/tt_chocolates_demibold.woff") format("woff"), url("../fonts/tt_chocolates_demibold.woff2") format("woff2"), url("../fonts/tt_chocolates_demibold.eot"), url("../fonts/tt_chocolates_demibold.eot?#iefix") format("embedded-opentype"), url("../fonts/tt_chocolates_demibold.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "tt_chocolates_medium";
+  src: url("../fonts/tt_chocolates_medium.woff") format("woff"), url("../fonts/tt_chocolates_medium.woff2") format("woff2"), url("../fonts/tt_chocolates_medium.eot"), url("../fonts/tt_chocolates_medium.eot?#iefix") format("embedded-opentype"), url("../fonts/tt_chocolates_medium.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  background-color: #F5FAFF;
+  font-family: "tt_chocolates_medium";
+  font-size: 16px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+header h3 {
+  font-family: "tt_chocolates_bold";
+  font-size: 24px;
+}
+@media (max-width: 768px) {
+  header h3 {
+    width: 100%;
+    text-align: center;
+  }
+}
+header a {
+  display: none;
+  color: #000000;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  header a {
+    display: flex;
+  }
+}
+header .articleCart-delete {
+  display: none;
+}
+@media (max-width: 768px) {
+  header .articleCart-delete {
+    display: flex;
+    cursor: pointer;
+  }
+}
+
+button {
+  padding: 16px 35px;
+  border: none;
+  border-radius: 50px;
+  font-family: "tt_chocolates_demibold", sans-serif;
+  font-size: 16px;
+  color: #FFFFFF;
+  background-color: #FF916F;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.button-orange:hover {
+  background-color: #ff5723;
+}
+
+input::placeholder {
+  color: #000000;
+}
+
+.mainContainer {
+  display: grid;
+  grid-template-columns: calc(70% - 16px) 30%;
+  column-gap: 16px;
+  row-gap: 16px;
+  grid-template-rows: auto;
+  grid-template-areas: "articleList articleCart";
+  padding: 3%;
+  margin: 0 auto;
+  width: calc(100% - 6%);
+  max-width: 1200px;
+}
+@media (max-width: 768px) {
+  .mainContainer {
+    grid-template-columns: 100%;
+    column-gap: 0;
+    grid-template-areas: "articleList" "articleCart";
+  }
+}
+
+.articleList {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  grid-area: articleList;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.articleList li {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #D5DDE5;
+}
+.articleList li:last-child {
+  border: none;
+}
+.articleList li:hover {
+  cursor: pointer;
+  background-color: #D5DDE5;
+}
+.articleList li .label {
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.5s;
+  width: 100%;
+  padding: 16px;
+}
+.articleList li .deleteButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s;
+  align-items: stretch;
+  padding: 16px;
+  width: 70px;
+  height: 100%;
+  background-color: #FF3B30;
+  color: #FFFFFF;
+  margin: 0 -102px 0 0;
+}
+.articleList .delete .label {
+  width: calc(100% - 70px);
+}
+.articleList .delete .deleteButton {
+  margin: 0;
+}
+
+.articleCart {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  grid-area: articleCart;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+}
+.articleCart-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  padding: 0 16px 48px 16px;
+}
+.articleCart-form label {
+  position: relative;
+}
+.articleCart-form input {
+  height: 22px;
+  width: calc(100% - 22px);
+  padding: 10px;
+  font-size: 16px;
+  color: #B8C1CC;
+  border: 1px solid #B8C1CC;
+  border-radius: 3px;
+}
+.articleCart-form span {
+  position: absolute;
+  top: -4px;
+  left: 10px;
+  z-index: 9;
+  padding: 0 6px;
+  font-family: "tt_chocolates_medium";
+  font-size: 12px;
+  background-color: #ffffff;
+}
+.articleCart-taxe input, .articleCart-price input {
+  position: relative;
+  text-align: right;
+  padding: 10px 30px 10px 10px;
+  width: calc(100% - 42px);
+  color: #000000;
+}
+.articleCart-taxe input:last-child, .articleCart-price input:last-child {
+  font-family: "tt_chocolates_demibold", sans-serif;
+}
+.articleCart-taxe:after, .articleCart-price:after {
+  content: "€";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0px;
+  width: 32px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F5FAFF;
+  border-radius: 0 4px 4px 0;
+  color: #000000;
+  border: 1px solid #B8C1CC;
+  border-left: none;
+}
+.articleCart-taxe:after {
+  content: "%";
+}
+.articleCart-result {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
+  font-family: "tt_chocolates_demibold", sans-serif;
+}
+.articleCart-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=style.css.map */
