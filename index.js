@@ -14,27 +14,41 @@ new Vue({
         id: _.uniqueId(), 
         value: this.userInput 
       };
-      console.log(newTodo)
       this.todos.push(newTodo);
     },
     removeTodo: function(todo){
       const index = _.findIndex(this.todos, todo);
       this.todos.splice(index, 1);
     },
+
+    updateTodo: function(todo) {
+      const updateTodo = { 
+        id: _.findIndex(this.todos, todo),
+        value: this.userInput 
+      };
+      this.todos.splice(updateTodo);
+    },
+    
+    
+
+
+
+    
+
+    // updateTodo() {
+    //   axios.get('https://jsonplaceholder.typicode.com/todo/1').then(response => this.todos = response.data).catch(erreur => this.todos = [{title: 'Erreur de chargement'}]);
+    // },
+    // addTodo() {
+    //   axios.post('https://jsonplaceholder.typicode.com/todos',{
+    //     article: "56",
+    //     title: 'LKJHGHJ'
+    //   }).then(value => console.log(value))      
+    // },
+
+    
   },
   // computed: {
   //   // const result = 100 + (100 / 100) * 20;
   //   // console.log(result)
   // },
 });
-
-
-
-
-
-
-
-
-
-
-

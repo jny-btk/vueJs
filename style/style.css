@@ -24,6 +24,7 @@ body {
   background-color: #F5FAFF;
   font-family: "tt_chocolates_medium";
   font-size: 16px;
+  color: #151F2A;
 }
 
 header {
@@ -45,7 +46,7 @@ header h3 {
 }
 header a {
   display: none;
-  color: #000000;
+  color: #151F2A;
   text-decoration: none;
 }
 @media (max-width: 768px) {
@@ -80,7 +81,7 @@ button {
 }
 
 input::placeholder {
-  color: #000000;
+  color: #151F2A;
 }
 
 .mainContainer {
@@ -132,7 +133,7 @@ input::placeholder {
   width: 100%;
   padding: 16px;
 }
-.articleList li .deleteButton {
+.articleList li .action-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,18 +142,29 @@ input::placeholder {
   padding: 16px;
   width: 70px;
   height: 100%;
-  background-color: #FF3B30;
   color: #FFFFFF;
-  margin: 0 -102px 0 0;
 }
-.articleList .delete .label {
-  width: calc(100% - 70px);
+.articleList li .deleteButton {
+  background-color: #FF3B30;
+  margin-right: -197px;
 }
-.articleList .delete .deleteButton {
+.articleList li .deleteButton:hover {
+  background-color: #DC3D3D;
+}
+.articleList li .editButton {
+  background-color: #FCB974;
+}
+.articleList li .editButton:hover {
+  background-color: #CD8944;
+}
+.articleList .delete .action-button {
   margin: 0;
 }
-.articleList .delete .deleteButton:hover {
-  background-color: #e30c00;
+.articleList .delete .action-button:hover {
+  background-color: #DC3D3D;
+}
+.articleList .delete .deleteButton {
+  margin-right: 0;
 }
 
 .articleCart {
@@ -196,7 +208,7 @@ input::placeholder {
   text-align: right;
   padding: 10px 30px 10px 10px;
   width: calc(100% - 42px);
-  color: #000000;
+  color: #151F2A;
 }
 .articleCart-taxe input:last-child, .articleCart-price input:last-child {
   font-family: "tt_chocolates_demibold", sans-serif;
@@ -214,7 +226,7 @@ input::placeholder {
   justify-content: center;
   background-color: #F5FAFF;
   border-radius: 0 4px 4px 0;
-  color: #000000;
+  color: #151F2A;
   border: 1px solid #B8C1CC;
   border-left: none;
 }

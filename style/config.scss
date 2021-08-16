@@ -48,13 +48,16 @@ $color1: #F5FAFF;
 $color2: #D5DDE5;
 $color3: #B8C1CC;
 $colorWhite: #FFFFFF;
-$colorBlack: #000000;
+$colorBlack: #151F2A;
 $colorOrange: #FF916F;
 $colorRed: #FF3B30;
+$colorApricot : #FCB974;
+
 // Effects 
 
 $colorDarkenOrange: darken($colorOrange, 15%);
-$colorDarkenRed: darken($colorRed, 15%);
+$colorDarkenRed: #DC3D3D;
+$colorDarkenApricot: #CD8944; 
 
 // Style 
 
@@ -73,7 +76,6 @@ $borderRadius : 8px;
   align-items: center;
   justify-content: center;
 }
-
 @mixin button {
   padding: 16px 35px;
   border: none;

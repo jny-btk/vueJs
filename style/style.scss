@@ -6,6 +6,7 @@ body {
   background-color: $color1;
   font-family: $ffTxt;
   font-size: 16px;
+  color: $colorBlack;
 }
 header {
   display: flex;
@@ -96,28 +97,42 @@ input::placeholder{
       width: 100%;
       padding: $padding16;
     }
-    .deleteButton {
+    .action-button  {
       @include flexFullCenter;
       transition: all 1s;
       align-items: stretch;
       padding: $padding16;
       width: 70px;
       height: 100%;
-      background-color: $colorRed;
       color: $colorWhite;
-      margin: 0 -102px 0 0;
-    }
-  }
-  .delete {
-    .label {
-      width: calc(100% - 70px);
+      // margin: 0 -102px 0 0;
     }
     .deleteButton {
+      background-color: $colorRed;
+      margin-right: -197px;
+      &:hover {
+        background-color: $colorDarkenRed;
+      }
+    }
+    .editButton {
+      background-color: $colorApricot;
+      &:hover {
+        background-color: $colorDarkenApricot;
+      }
+    }
+  }
+  
+  .delete {
+    .action-button {
       margin: 0 ;
       &:hover {
         background-color: $colorDarkenRed;
       }
     }
+    .deleteButton {
+      margin-right: 0;
+  }
+
   }
 }
 .articleCart {

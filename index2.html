@@ -17,17 +17,19 @@
         <h3>Mes articles</h3>
       </header>
       <ul>
-        <li @click="active = !active" :aria-pressed="active ? 'true' : 'false'" :class="{ delete: active }">
+        <li >
           <div class="label">Achat de matériel<i class="fas fa-chevron-right"></i></div>
           <div class="action-button editButton"><i class="fas fa-pen"></i></div>
           <div class="action-button deleteButton"><i class="far fa-trash-alt"></i></div>
         </li>
-        <li v-for="todo in todos" v-bind:key="todo.id" @click="active = !active" :aria-pressed="active ? 'true' : 'false'" :class="{ delete: active }">
-          <div class="label">{{ todo.value }} <i class="fas fa-chevron-right"></i></div> 
-          <div class="action-button editButton" v-on:click="updateTodo"><i class="fas fa-pen"></i></div>
-          <div class="action-button deleteButton" v-on:click="removeTodo"><i class="far fa-trash-alt"></i></div>
+
+
+
+
+        <!-- <li @click="active = !active" :aria-pressed="active ? 'true' : 'false'" :class="{ delete: active }">
+          <div class="label">Dépose des murs<i class="fas fa-chevron-right"></i></div>
+          <div class="deleteButton"><i class="far fa-trash-alt"></i></div>
         </li>
-        <!--
         <li @click="active = !active" :aria-pressed="active ? 'true' : 'false'" :class="{ delete: active }">
           <div class="label">Dépose des radiateurs<i class="fas fa-chevron-right"></i></div>
           <div class="deleteButton"><i class="far fa-trash-alt"></i></div>
@@ -44,7 +46,10 @@
           <div class="label">Pose meuble vasque<i class="fas fa-chevron-right"></i></div>
           <div class="deleteButton"><i class="far fa-trash-alt"></i></div>
         </li> -->
-
+        <li @click="active = !active" :aria-pressed="active ? 'true' : 'false'" :class="{ delete: active }" v-for="todo in todos">
+          <div class="label" >{{ todo.value }}<i class="fas fa-chevron-right"></i></div> 
+          <div class="deleteButton"  v-on:click="removeTodo(todo)"><i class="far fa-trash-alt"></i></div>
+        </li>
       </ul>
     </section>
     <aside class="articleCart">
@@ -71,8 +76,7 @@
             <p>{{ addArticle }} €</p>
           </div>
           <div class="articleCart-button">
-            <button class="button-orange" v-on:click="addTodo()">Enregistrer l'article</button>
-            <!-- <button v-on:click="addTodo" class="button-orange" v-on:click="addArticle()">Enregistrer l'article</button> -->
+            <button v-on:click="addTodo" class="button-orange">Enregistrer l'article</button>
           </div>
         </footer>
       </div> <!-- End articleCart-form -->
@@ -83,7 +87,6 @@
   <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
   <script src="index.js"></script>
   <script src="https://kit.fontawesome.com/890993565b.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 </body>
 </html>
