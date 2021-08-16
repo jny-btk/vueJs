@@ -50,10 +50,11 @@ $color3: #B8C1CC;
 $colorWhite: #FFFFFF;
 $colorBlack: #000000;
 $colorOrange: #FF916F;
-
+$colorRed: #FF3B30;
 // Effects 
 
 $colorDarkenOrange: darken($colorOrange, 15%);
+$colorDarkenRed: darken($colorRed, 15%);
 
 // Style 
 

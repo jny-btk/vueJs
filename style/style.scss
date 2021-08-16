@@ -103,7 +103,7 @@ input::placeholder{
       padding: $padding16;
       width: 70px;
       height: 100%;
-      background-color: #FF3B30;
+      background-color: $colorRed;
       color: $colorWhite;
       margin: 0 -102px 0 0;
     }
@@ -114,6 +114,9 @@ input::placeholder{
     }
     .deleteButton {
       margin: 0 ;
+      &:hover {
+        background-color: $colorDarkenRed;
+      }
     }
   }
 }
