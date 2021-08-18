@@ -24,7 +24,7 @@
         </li>
         <li v-for="todo in todos" v-bind:key="todo.id" @click="active = !active" :aria-pressed="active ? 'true' : 'false'" :class="{ delete: active }">
           <div class="label">{{ todo.value }} <i class="fas fa-chevron-right"></i></div> 
-          <div class="action-button editButton" v-on:click="updateTodo"><i class="fas fa-pen"></i></div>
+          <div class="action-button editButton"><i class="fas fa-pen"></i></div>
           <div class="action-button deleteButton" v-on:click="removeTodo"><i class="far fa-trash-alt"></i></div>
         </li>
         <!--
@@ -44,7 +44,6 @@
           <div class="label">Pose meuble vasque<i class="fas fa-chevron-right"></i></div>
           <div class="deleteButton"><i class="far fa-trash-alt"></i></div>
         </li> -->
-
       </ul>
     </section>
     <aside class="articleCart">
