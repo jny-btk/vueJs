@@ -146,7 +146,7 @@ input::placeholder {
 }
 .articleList li .deleteButton {
   background-color: #FF3B30;
-  margin-right: -197px;
+  margin-right: -200px;
 }
 .articleList li .deleteButton:hover {
   background-color: #DC3D3D;

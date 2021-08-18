@@ -27,33 +27,6 @@ new Vue({
       this.todos.splice(index, 1);
     },
 
-    // updateTodo: function(todo) {
-    //   const updateTodo = { 
-    //     id: _.findIndex(this.todos, todo),
-    //     value: this.userInput 
-    //   };
-    //   this.todos.splice(updateTodo);
-    // },
-    
-    
-    updateTodo() {
-      if (this.isEditing) {
-        this.finishEditing();
-      } else {
-        this.newTodoDescription = this.description;
-        this.isEditing = true;
-        this.$nextTick(() => this.$refs.newTodo.focus());
-      }
-    },
-
-    finishEditing() {
-      this.isEditing = false;
-      this.$emit("on-edit", this.newTodoDescription);
-    }
-  
-
-    
-
     // updateTodo() {
     //   axios.get('https://jsonplaceholder.typicode.com/todo/1').then(response => this.todos = response.data).catch(erreur => this.todos = [{title: 'Erreur de chargement'}]);
     // },
@@ -63,7 +36,6 @@ new Vue({
     //     title: 'LKJHGHJ'
     //   }).then(value => console.log(value))      
     // },
-
     
   },
   // computed: {

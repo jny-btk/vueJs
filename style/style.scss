@@ -109,7 +109,7 @@ input::placeholder{
     }
     .deleteButton {
       background-color: $colorRed;
-      margin-right: -197px;
+      margin-right: -200px;
       &:hover {
         background-color: $colorDarkenRed;
       }
@@ -121,7 +121,6 @@ input::placeholder{
       }
     }
   }
-  
   .delete {
     .action-button {
       margin: 0 ;
@@ -131,8 +130,7 @@ input::placeholder{
     }
     .deleteButton {
       margin-right: 0;
-  }
-
+    }
   }
 }
 .articleCart {
