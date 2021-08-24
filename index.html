@@ -66,7 +66,7 @@
       </header>
       <div class="articleCart-form">
         <label class="articleCart-name">
-          <input type="text" placeholder="Nom de l'article" v-model.lazy="userInput" required="required" @keyup.enter="newTask">
+          <input type="text" placeholder="Nom de l'article" v-model.lazy="userInput" required="required" v-model="newTaskName" @keyup.enter="newTask">
         </label>
         <label for="firstNumber" class="articleCart-price" >
           <span>Prix unitaire Ht</span>
@@ -82,8 +82,7 @@
             <input type="text" id="result" readonly v-model="result">
           </div>
           <div class="articleCart-button">
-            <!-- <button class="button-orange" v-on:click="newTask()">Enregistrer l'article</button> -->
-            
+            <button class="button-orange" @click="newTask">Enregistrer l'article</button>
           </div>
         </footer>
       </div> <!-- End articleCart-form -->

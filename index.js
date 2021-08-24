@@ -42,20 +42,21 @@ new Vue({
     //   todo.editing = false;
     // }
 
-    completeTask: (task) => {
-        task.completed = true;
-    },
-    newTask: () => {
-        this.tasklist.push({description: this.newTaskName, completed: false, editing: false});
-    },
-    removeTask: (task) => {
-        this.tasklist.splice(this.tasklist.indexOf(task), 1);
-        console.log(task);
-    },
-    editTask: (task) => {
-        task.editing = false;
-        console.log(task);
-    }
+    completeTask: function(task){
+      task.completed = true;
+  },
+  newTask: function(){
+      this.tasklist.push({description: this.newTaskName, completed: false, editing: false});
+  },
+  removeTask: function(task){
+      this.tasklist.splice(this.tasklist.indexOf(task), 1);
+      console.log(task);
+  },
+  editTask: function(task){
+      task.editing = false;
+      console.log(task);
+  }
+
 
   }, /* End method */ 
 

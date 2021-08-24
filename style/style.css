@@ -269,4 +269,9 @@ input::placeholder {
   justify-content: center;
 }
 
+.ctn-button {
+  width: 286px;
+  display: flex;
+}
+
 /*# sourceMappingURL=style.css.map */
