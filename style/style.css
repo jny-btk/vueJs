@@ -1,21 +1,21 @@
 @charset "UTF-8";
 @font-face {
   font-family: "tt_chocolates_bold";
-  src: url("../fonts/tt_chocolates_bold.woff") format("woff"), url("../fonts/tt_chocolates_bold.woff2") format("woff2"), url("../fonts/tt_chocolates_bold.eot"), url("../fonts/tt_chocolates_bold.eot?#iefix") format("embedded-opentype"), url("../fonts/tt_chocolates_bold.otf") format("truetype");
+  src: url("./fonts/tt_chocolates_bold.woff") format("woff"), url("./fonts/tt_chocolates_bold.woff2") format("woff2"), url("./fonts/tt_chocolates_bold.eot"), url("./fonts/tt_chocolates_bold.eot?#iefix") format("embedded-opentype"), url("./fonts/tt_chocolates_bold.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "tt_chocolates_demibold";
-  src: url("../fonts/tt_chocolates_demibold.woff") format("woff"), url("../fonts/tt_chocolates_demibold.woff2") format("woff2"), url("../fonts/tt_chocolates_demibold.eot"), url("../fonts/tt_chocolates_demibold.eot?#iefix") format("embedded-opentype"), url("../fonts/tt_chocolates_demibold.otf") format("truetype");
+  src: url("./fonts/tt_chocolates_demibold.woff") format("woff"), url("./fonts/tt_chocolates_demibold.woff2") format("woff2"), url("./fonts/tt_chocolates_demibold.eot"), url("./fonts/tt_chocolates_demibold.eot?#iefix") format("embedded-opentype"), url("./fonts/tt_chocolates_demibold.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "tt_chocolates_medium";
-  src: url("../fonts/tt_chocolates_medium.woff") format("woff"), url("../fonts/tt_chocolates_medium.woff2") format("woff2"), url("../fonts/tt_chocolates_medium.eot"), url("../fonts/tt_chocolates_medium.eot?#iefix") format("embedded-opentype"), url("../fonts/tt_chocolates_medium.otf") format("truetype");
+  src: url("./fonts/tt_chocolates_medium.woff") format("woff"), url("./fonts/tt_chocolates_medium.woff2") format("woff2"), url("./fonts/tt_chocolates_medium.eot"), url("./fonts/tt_chocolates_medium.eot?#iefix") format("embedded-opentype"), url("./fonts/tt_chocolates_medium.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -236,8 +236,32 @@ input::placeholder {
 .articleCart-result {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 48px;
   font-family: "tt_chocolates_demibold", sans-serif;
+}
+.articleCart-result p {
+  width: 50%;
+}
+.articleCart-result input {
+  position: relative;
+  border: none;
+  text-align: right;
+  padding: 0;
+  color: #151F2A;
+}
+.articleCart-result input:after {
+  content: "€";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0px;
+  width: 32px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #151F2A;
 }
 .articleCart-button {
   display: flex;

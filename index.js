@@ -1,45 +1,68 @@
 new Vue({
   el: '#app',
   data: {
-    todos: [],
+    // todos: [ {editing: false }],
+    // todo: '',
     userInput: '', 
     addArticle : '00.00',
-    addTaxe: '20',
     active: false,
-    show: true,
-    isEditing: false,
-    newTodoDescription: "",
-  },
-  props: {
-    description: String,
-    completed: Boolean
+    firstNumber : '',
+    addTaxe: '20',
+
+    message: 'Tasks',
+        completed: null,
+        newTaskName: '',
+        tasklist: [
+            { description: 'Read', completed: true, editing: false },
+            { description: 'Write', completed: true, editing: false  },
+            { description: 'Edit', completed: false, editing: false  },
+            { description: 'Publish', completed: false, editing: false  }
+        ]
+    
+
+
+
+
+
   },
   methods: {
-    addTodo() {
-      const newTodo = { 
-        id: _.uniqueId(), 
-        value: this.userInput 
-      };
-      this.todos.push(newTodo);
-    },
-    removeTodo: function(todo){
-      const index = _.findIndex(this.todos, todo);
-      this.todos.splice(index, 1);
-    },
-
-    // updateTodo() {
-    //   axios.get('https://jsonplaceholder.typicode.com/todo/1').then(response => this.todos = response.data).catch(erreur => this.todos = [{title: 'Erreur de chargement'}]);
-    // },
     // addTodo() {
-    //   axios.post('https://jsonplaceholder.typicode.com/todos',{
-    //     article: "56",
-    //     title: 'LKJHGHJ'
-    //   }).then(value => console.log(value))      
+    //   const newTodo = { 
+    //     id: _.uniqueId(), 
+    //     value: this.userInput 
+    //   };
+    //   this.todos.push(newTodo);
     // },
-    
+    // removeTodo: function(todo){
+    //   const index = _.findIndex(this.todos, todo);
+    //   this.todos.splice(index, 1);
+    // },
+
+    // editTodo: function(todo){
+    //   todo.editing = false;
+    // }
+
+    completeTask: (task) => {
+        task.completed = true;
+    },
+    newTask: () => {
+        this.tasklist.push({description: this.newTaskName, completed: false, editing: false});
+    },
+    removeTask: (task) => {
+        this.tasklist.splice(this.tasklist.indexOf(task), 1);
+        console.log(task);
+    },
+    editTask: (task) => {
+        task.editing = false;
+        console.log(task);
+    }
+
+  }, /* End method */ 
+
+  computed: {
+    result: function(){
+      return  this.firstNumber * (1+20/100);
+    }
   },
-  // computed: {
-  //   // const result = 100 + (100 / 100) * 20;
-  //   // console.log(result)
-  // },
+
 });

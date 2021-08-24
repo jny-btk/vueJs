@@ -204,8 +204,33 @@ input::placeholder{
   &-result {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 48px;
     font-family: $ffSubTitle;
+    p {
+      width: 50%
+    }
+    input {
+      position: relative;
+      border: none;
+      text-align: right;
+      padding: 0;
+      color: $colorBlack;
+      &:after {
+        content: '€';
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0px;
+        width: 32px;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $colorBlack;
+
+      }
+    }
   }
   &-button {
     @include flexFullCenter; 
