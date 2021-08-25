@@ -130,8 +130,16 @@ input::placeholder {
   display: flex;
   justify-content: space-between;
   transition: all 0.5s;
-  width: 100%;
+  width: calc(100% - 204px);
   padding: 16px;
+}
+.articleList li input {
+  width: calc(100% - 204px);
+  padding: 16px;
+}
+.articleList li .ctn-button {
+  width: 204px;
+  display: flex;
 }
 .articleList li .action-button {
   display: flex;
@@ -141,7 +149,6 @@ input::placeholder {
   align-items: stretch;
   padding: 16px;
   width: 70px;
-  height: 100%;
   color: #FFFFFF;
 }
 .articleList li .deleteButton {
@@ -267,11 +274,6 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.ctn-button {
-  width: 286px;
-  display: flex;
 }
 
 /*# sourceMappingURL=style.css.map */

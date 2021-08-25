@@ -94,8 +94,16 @@ input::placeholder{
       display: flex;
       justify-content: space-between;
       transition: all 0.5s;
-      width: 100%;
+      width: calc(100% - 204px);
       padding: $padding16;
+    }
+    input {
+      width: calc(100% - 204px);
+      padding: $padding16;
+    }
+    .ctn-button {
+      width: 204px;
+      display: flex;
     }
     .action-button  {
       @include flexFullCenter;
@@ -103,9 +111,7 @@ input::placeholder{
       align-items: stretch;
       padding: $padding16;
       width: 70px;
-      height: 100%;
       color: $colorWhite;
-      // margin: 0 -102px 0 0;
     }
     .deleteButton {
       background-color: $colorRed;
@@ -240,7 +246,3 @@ input::placeholder{
 
 
 
-.ctn-button {
-  width: 286px;
-  display: flex;
-}
