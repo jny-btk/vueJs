@@ -5,7 +5,8 @@ new Vue({
     firstNumber : '',
     completed: null,
     newTaskName: '',
-    tasklist: []
+    tasklist: [],
+    asideOpen: false,
   },
   methods: {
     completeTask: function(task){

@@ -13,7 +13,7 @@
   <div id="app" class="mainContainer">
     <section class="articleList">
       <header>
-        <a href="#"><i class="fas fa-chevron-left"></i></a>
+        <a @click="asideOpen = !asideOpen"><i class="fas fa-chevron-left"></i></a>
         <h3>Mes articles</h3>
       </header>
       <ul>
@@ -27,9 +27,9 @@
         </li>
       </ul>
     </section>
-    <aside class="articleCart">
+    <aside :class =" `articleCart ${ asideOpen? 'asideOpen' : ''}` " >
       <header>
-        <a href="#"><i class="fas fa-chevron-left"></i></a>
+        <a @click="asideOpen = !asideOpen"><i class="fas fa-chevron-left"></i></a>
         <h3>Ajouter un article</h3>
       </header>
       <div class="articleCart-form">

@@ -102,7 +102,7 @@ input::placeholder{
       padding: $padding16;
     }
     .ctn-button {
-      width: 204px;
+      width: 232px;
       display: flex;
     }
     .action-button  {
@@ -234,7 +234,6 @@ input::placeholder{
         align-items: center;
         justify-content: center;
         color: $colorBlack;
-
       }
     }
   }
@@ -242,6 +241,22 @@ input::placeholder{
     @include flexFullCenter; 
   }
 }
+
+
+
+
+@media (max-width: 768px) {
+  .articleCart {
+    position: absolute;
+    right: -100vw;
+    width: calc(100% - 32px);
+    transition: right 0.2s;
+  }
+  .articleCart.asideOpen {
+    right: $padding16;
+  }
+}
+
 
 
 
